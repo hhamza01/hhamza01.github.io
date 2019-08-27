@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  #rubrik{border:3px; border-style:solid; border-color:black; padding: 30px;
+  margin-left:20px; margin-right:20px; text-align: center; background-color:#8C6373; border-radius:
+  }
+  #rubrik2{border:3px; border-style:solid; border-color:yellow;
+  margin-left:300px; margin-right:300px; text-align: center; background-color:lightyellow;
+  margin-top: 30px;
+  }
+  #table{
+    margin: auto;
+    width: 50vw;
+  }
+
+  #result{
+      margin-left: 45.2%;
+      margin-top: 1%;
+      margin-bottom: 2%;
+  }
+
+  #box{
+      width: 53vw;
+      height: 8vh;
+      background-color: lightgreen;
+      margin-left: 23.7%;
+      margin-bottom: 2%;
+      padding-top: 1.5%;
+      text-align: center;
+  }
+  .knapp{
+      margin-left: 43.4%;
+      margin-top: 1%;
+      display: block;
+      width: 13%;
+      background-color: yellow;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+  }
+
+
+  </style>
+  <script>
+
+  function MyFunction() {
+              var table = document.getElementById("table");
+              var e;
+              var kurs = 0;
+              var betyg = 0;
+              var totalMerit = 0;
+              var totalMeritResultat = 0;
+
+              for (var i = 1; i < table.rows.length; i++) {
+                  kurs = parseInt(table.rows[i].cells[1].innerHTML);
+                  e = document.getElementById("betyg" + i);
+                  betyg = e.value;
+
+                  totalMerit += kurs * betyg;
+              }
+
+              totalMeritResultat = totalMerit/2400;
+              document.getElementById("result").innerHTML = totalMeritResultat + " Merit Poäng";
+          }
+
+
+
+
+    </script>
+  <div>
+  <h1 id="rubrik">
+  Räkna ut merit och gymnasieexamen mål
+
+    </div>
+
+    <div>
+  <h1 id="rubrik2">
+  Lägg till dina  kurser och poäng
+
+  </div>
+
+</head>
+
+
+<body>
+
+
+  <table id="table" border="1">
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Matte 1c</p>
+              </td>
+              <td>
+                  <p> 100 </p>
+
+              </td>
+              <td>
+
+                </select>
+                  <select name="" id="betyg1">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <p>Matte 2c</p>
+              </td>
+              <td>
+                  <p> 100 </p>
+
+              </td>
+              <td>
+                  <select name="" id="betyg2">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <p>Matte 3c</p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg3">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <p> Svenska 1</p>
+              </td>
+              <td>
+                    <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg4">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Svenska 2 </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              <td>
+                  <select name="" id="betyg5">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Svenska 3 </p>
+              </td>
+              <td>
+                <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg6">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Engleska 5 </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              <td>
+                  <select name="" id="betyg7">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Engelska 6 </p>
+              </td>
+              <td>
+                    <p> 100 </p>
+              <td>
+                  <select name="" id="betyg9">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>fysik 1 </p>
+              </td>
+              <td>
+                    <p> 150 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg9">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Fysik 2 </p>
+              </td>
+              <td>
+                <p> 150 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg10">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Idrott och Hälsa </p>
+              </td>
+              <td>
+                <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg11">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Programmering 1 </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg12">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Programmering 2 </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              <td>
+                  <select name="" id="betyg13">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Dator och nätverksteknik </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg14">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Relgion </p>
+              </td>
+              <td>
+                <p> 50 </p>
+              <td>
+                  <select name="" id="betyg15">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Samhällskunskap </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg16">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Historia  </p>
+              </td>
+              <td>
+                  <p> 50 </p>
+              </td>
+              <td>
+                  <select name="" id="kurs17">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Kemi1</p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg18">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Webbutveckling1</p>
+              </td>
+              <td>
+                <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg19">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Webbutveckling2  </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg20">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p> Webbserverprogrammering1</p>
+              </td>
+              <td>
+                  <p> 100 </p>
+
+              <td>
+                  <select name="" id="betyg21">
+
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Teknik1 </p>
+              </td>
+              <td>
+                  <p> 150 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg22">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <th>Kurs</th>
+              <th>Poäng</th>
+              <th>Betyg</th>
+          </tr>
+          <tr>
+              <td>
+                  <p>Gränssnittsdesign </p>
+              </td>
+              <td>
+                  <p> 100 </p>
+              </td>
+              <td>
+                  <select name="" id="betyg23">
+                      <option value="0">F</option>
+                      <option value="10">E</option>
+                      <option value="12.5">D</option>
+                      <option value="15">C</option>
+                      <option value="17.5">B</option>
+                      <option value="20">A</option>
+                  </select>
+              </td>
+          </tr>
+      </table>
+<button type ="button" class="knapp" onclick="MyFunction()"> Räkna ut dina poäng </button>
+<p id="summa"><p id="box"> Du har läst 2350 värt av poäng. För att klara Gymnasiet så behöver du ha läst 2500 poäng samt ha godkänt i 2250 poäng </p></p>
+</body>
+</html>
